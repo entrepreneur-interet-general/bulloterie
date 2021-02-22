@@ -1,0 +1,277 @@
+Nom;Sujet;Theme;Metier;Donne;Prend
+Pengfei;Data storage;Bases de Donnees;Data;1;0
+Pengfei;Data management;Bases de Donnees;Data;1;0
+Thomas;Graph;Bases de Donnees;Data;0;1
+Helene ;MongoDB;Bases de Donnees;Data;0;1
+Helene ;MySQL;Bases de Donnees;Data;0;1
+Nicolas;Oracle;Bases de Donnees;Data;0;1
+Antoine ;Airflow;Data engineering;Data;1;0
+Thomas;Architecture DB Oriente Process;Data engineering;Data;0;1
+Line;Data engineering;Data engineering;Data;0;1
+Sophie;Data engineering;Data engineering;Data;1;0
+Vincent ;Data engineering;Data engineering;Data;0;1
+Jerome;Data pipeline : ETL;Data engineering;Data;0;1
+Aliaume ;Elasticsearch;Data engineering;Data;0;1
+Antoine ;Elasticsearch;Data engineering;Data;0;1
+Elisabeth ;ETL;Data engineering;Data;0;1
+Guillaume;ETL;Data Engineering;Data;1;0
+Raphaelle B;Prefect;Data Engineering;Data;1;0
+Pengfei;Spark (Scala /Python);Data engineering;Data;1;0
+Pengfei;Machine Learning implementation;Data engineering;Data;1;0
+Raphaelle B;Temps reel;Data science;Data;1;0
+Raphaelle B;Traitement de signal;Data science;Data;1;0
+Raphaelle R;QGIS;Geomatique;Data;0;1
+Jerome;Machine Learning;Machine Learning;Data;0;1
+Nathan;Content design;Communication;Design;0;1
+Anne;Accessibilite;Conception;Design;0;1
+Cedric;Accessibilite;Conception;Design;0;1
+Joelle;Accessibilite;Conception;Design;0;1
+Julie;Accessibilite;Conception;Design;0;1
+Lou;Accessibilite;Conception;Design;0;1
+Anne;Ateliers co-conception;Conception;Design;1;0
+Coline;Ateliers co-conception;Conception;Design;0;1
+Nathan;Ateliers co-conception;Conception;Design;1;0
+Sophie;Ateliers co-conception;Conception;Design;1;0
+Camille;Design d'interface;Conception;Design;1;0
+Adeline ;Design d'interface;Conception;Design;0;1
+Anne;Design d'interface;Conception;Design;1;0
+Julie;Design d'interface;Conception;Design;1;0
+Lisa;Design d'interface;Conception;Design;1;0
+Pengfei;Design d'interface;Conception;Design;0;1
+Sophie;Design d'interface;Conception;Design;0;1
+Coline;Design de service;Conception;Design;1;0
+Joelle;Design de service;Conception;Design;0;1
+Lou;Design de service;Conception;Design;1;0
+Coline;Design fiction;Conception;Design;1;0
+Nathan;Design generatif;Conception;Design;0;1
+Joelle;Design public;Conception;Design;1;0
+Anne;Design system;Conception;Design;1;0
+Jerome;Design system;Conception;Design;0;1
+Romain;Design system;Conception;Design;1;0
+Salim;Design system;Conception;Design;1;0
+Stephanie;Design system;Conception;Design;1;0
+Nathan;Maquettage;Conception;Design;1;0
+Camille;Organisation hackathon;Conception;Design;1;0
+Stephanie;Outils d'animation a distance;Conception;Design;1;0
+Nathan;Parcours utilisateurs;Conception;Design;1;0
+Nathan;Service Blueprint;Conception;Design;1;0
+Adeline ;Animation;Conception;Design;1;0
+Camille;Animation;Conception;Design;1;0
+Julie;Animation;Conception;Design;0;1
+Adeline ;UX;Conception;Design;0;1
+Nathan;UX;Conception;Design;1;0
+Pengfei;UX;Conception;Design;0;1
+Remi;UX;Conception;Design;0;1
+Raphaelle B;UX;Conception;Design;1;0
+Julie;Design d'objets;Creation visuelle;Design;0;1
+Nathan;Design d'objets;Creation visuelle;Design;0;1
+Stephanie;Calligraphie;Creation visuelle;Design;1;0
+Salim;Dessin;Creation visuelle;Design;0;1
+Julie;Digital painting;Creation visuelle;Design;0;1
+Julie;Facilitation graphique;Creation visuelle;Design;0;1
+Adeline ;Illustration;Creation visuelle;Design;1;0
+Julie;Illustration;Creation visuelle;Design;0;1
+Anne;Motion design;Creation visuelle;Design;0;1
+Nathan;Motion design;Creation visuelle;Design;0;1
+Adeline ;Storyboard;Creation visuelle;Design;1;0
+Anne;Typographie;Creation visuelle;Design;1;0
+Salim;Typographie;Creation visuelle;Design;0;1
+Anne;Eco-conception;Environnement;Design;1;0
+Lou;Eco-conception;Environnement;Design;1;0
+Nadim;Eco-conception;Environnement;Design;1;0
+Joelle;Animation ateliers;Methodes;Design;0;1
+Salim;Animation ateliers;Methodes;Design;0;1
+Stephanie;Animation ateliers;Methodes;Design;0;1
+Coline;Design strategique;Methodes;Design;1;0
+Joelle;Design thinking;Methodes;Design;0;1
+Salim;Ethique design;Methodes;Design;0;1
+Joelle;Figma;Outils;Design;0;1
+Lou;Figma;Outils;Design;1;0
+Salim;Figma;Outils;Design;0;1
+Stephanie;Figma;Outils;Design;1;0
+Romain;Illustrator;Outils;Design;1;0
+Orphelins;Processing - Programmation Creative;Outils;Design;1;0
+Romain;Sketch;Outils;Design;1;0
+Lou;Suite Affinity;Outils;Design;1;0
+Adeline ;Maquettes intermediaires ;Prototypage;Design;1;0
+Coline;Protocole de test;Prototypage;Design;1;0
+Anne;Prototypage avance;Prototypage;Design;0;1
+Nadim;Prototypage avance;Prototypage;Design;0;1
+Lou;Prototypage objets;Prototypage;Design;1;0
+Stephanie;Webflow;Prototypage;Design;1;0
+Coline;Analyse sociologique;Recherche utilisateurs;Design;0;1
+Adeline ;Enquetes terrain;Recherche utilisateurs;Design;0;1
+Coline;Enquetes terrain;Recherche utilisateurs;Design;0;1
+Adeline ;Ethnographie;Recherche utilisateurs;Design;0;1
+Joelle;Methodes d'entretien;Recherche utilisateurs;Design;0;1
+Julie;Methodes d'entretien;Recherche utilisateurs;Design;1;0
+Nathan;Methodes d'entretien;Recherche utilisateurs;Design;1;0
+Adeline ;Methodes sociologiques;Recherche utilisateurs;Design;0;1
+Nathan;Organisation d'ateliers;Recherche utilisateurs;Design;1;0
+Romain;Sondages (preparation);Recherche utilisateurs;Design;0;1
+Vincent ;Construire API;API;Dev;0;1
+Antoine ;Fast API;API;Dev;0;1
+Benoit;GraphQL;API;Dev;1;0
+Helene ;GraphQL;API;Dev;1;0
+Aliaume ;Linux;OS;Dev;1;0
+Antoine ;Unix;OS;Dev;1;0
+Helene ;Angular;Programmation;Dev;1;0
+Nicolas;Clean code;Programmation;Dev;1;0
+Loup;Code review;Programmation;Dev;0;1
+Anne;Design system;Programmation;Dev;0;1
+Livia;Django;Programmation;Dev;1;0
+Matthieu;Django;Programmation;Dev;1;0
+Benoit;Express JS;Programmation;Dev;1;0
+Benjamin;Framework JS (avance);Programmation;Dev;0;1
+Helene ;Gherkin;Programmation;Dev;1;0
+Benjamin;HTML / CSS;Programmation;Dev;1;0
+Orphelins;Java;Programmation;Dev;1;0
+Helene ;Java (+Spring Mvc, Boot);Programmation;Dev;1;0
+Benjamin;Javascript;Programmation;Dev;1;0
+Benjamin;Javascript;Programmation;Dev;0;1
+Benoit;Nest JS;Programmation;Dev;1;0
+Matthieu;PHP;Programmation;Dev;1;0
+Jerome;Programmation fonctionnelle;Programmation;Dev;1;0
+Nathan;Programmation front;Programmation;Dev;1;0
+Raphaelle R;Programmation front;Programmation;Dev;1;0
+Helene ;Python;Programmation;Dev;1;0
+Livia;Python;Programmation;Dev;1;0
+Matthieu;Python;Programmation;Dev;1;0
+Alexandra;REACT;Programmation;Dev;0;1
+Benoit;REACT;Programmation;Dev;1;0
+Helene ;REACT;Programmation;Dev;1;0
+Romain;REACT;Programmation;Dev;0;1
+Thomas;REACT;Programmation;Dev;1;0
+Joseph ;REACT (avance);Programmation;Dev;0;1
+Jerome;REACT / Redux;Programmation;Dev;1;0
+Benoit;REACT Native;Programmation;Dev;1;0
+Cedric;REACT.js;Programmation;Dev;1;0
+Alexandra;Ruby on rails;Programmation;Dev;1;0
+Lisa;Ruby on rails;Programmation;Dev;1;0
+Joseph ;StoryBook;Programmation;Dev;0;1
+Cedric;Symfony PHP;Programmation;Dev;1;0
+Aliaume ;Systemes de types;Programmation;Dev;1;0
+Nicolas;Typage pour JS;Programmation;Dev;1;0
+Joseph ;Typescript (avance);Programmation;Dev;0;1
+Jerome;Typescript;Programmation;Dev;1;0
+Helene ;Architecture logicielle;Software Engineering;Dev;0;1
+Helene ;CI;Software Engineering;Dev;1;0
+Joseph ;CI / CD Github actions;Software Engineering;Dev;1;0
+Remi;CI /CD pour le ML;Software Engineering;Dev;1;0
+Raphaelle R;CI/CD;Software Engineering;Dev;1;0
+Elisabeth ;Clean architecture;Software Engineering;Dev;0;1
+Loup;Clean architecture;Software Engineering;Dev;1;0
+Matthieu;Cybersecurite;Software Engineering;Dev;0;1
+Raphael;DevOps;Software Engineering;Dev;0;1
+Sophie;DevOps;Software Engineering;Dev;0;1
+Sylvain;DevOps;Software Engineering;Dev;0;1
+Antoine ;Docker;Software Engineering;Dev;1;0
+Benoit;Docker;Software Engineering;Dev;0;1
+Cedric;Docker;Software Engineering;Dev;1;0
+Guillaume;Docker;Software Engineering;Dev;1;0
+Cedric;Domain Driven Development;Software Engineering;Dev;0;1
+Jerome;Hexagonal architecture;Software Engineering;Dev;1;0
+Loup;Hexagonal architecture;Software Engineering;Dev;1;0
+Joseph ;Kubernetes;Software Engineering;Dev;0;1
+Pengfei;Kubernetes;Software Engineering;Dev;0;1
+Raphaelle B;Kubernetes;Software Engineering;Dev;0;1
+Elisabeth ;Microservices;Software Engineering;Dev;1;0
+Raphaelle B;Cybersecurite;Software Engineering;Dev;0;1
+Antoine ;Test Driven Development;Software Engineering;Dev;0;1
+Cedric;Test Driven Development;Software Engineering;Dev;0;1
+Elisabeth ;Test Driven Development;Software Engineering;Dev;0;1
+Benjamin;Tests unitaires JS;Software Engineering;Dev;0;1
+Raphaelle B;Tests Webapp;Software Engineering;Dev;0;1
+Coline;Theatre participatif;Culture;Fun;0;1
+Camille;Reparation velo;Creation;Fun;1;0
+Raphaelle R;Reparation velo;Creation;Fun;0;1
+Benjamin;Meditation;Bien-etre;Fun;1;0
+Stephanie;Couture;Creation;Fun;0;1
+Coline;Donnees sonores generatives;Creation;Fun;1;0
+Aliaume ;Poterie;Creation;Fun;0;1
+Raphaelle R;Recycler vetements;Creation;Fun;0;1
+Salim;Photographie;Creation;Fun;0;1
+Pierre-Etienne;Archeologie;Culture;Fun;0;1
+Loup;Blockchain;Culture;Fun;1;0
+Salim;Cine club;Culture;Fun;1;0
+Guillaume;Genomique genetique bioinformatique;Culture;Fun;1;0
+Anne;Litterature;Culture;Fun;1;0
+Raphaelle R;Neurosciences / Sciences cognitives;Culture;Fun;1;0
+Benoit;Civic tech;Engagement citoyen;Fun;0;1
+Thomas;Civic tech;Engagement citoyen;Fun;0;1
+Camille;Contribuer a wikipedia;Engagement citoyen;Fun;1;0
+Nadim;Diversite dans le numerique;Engagement citoyen;Fun;0;1
+Antoine ;Feminisme;Engagement citoyen;Fun;0;1
+Elisabeth ;Inclusion dans le numerique;Engagement citoyen;Fun;1;0
+Nadim;Inclusion dans le numerique;Engagement citoyen;Fun;0;1
+Guillaume;Batiments ecologiques;Environnement;Fun;1;0
+Anne;Jardinage;Environnement;Fun;0;1
+Benjamin;Jardinage;Environnement;Fun;0;1
+Nadim;Jardinage;Environnement;Fun;0;1
+Anne;Permaculture;Environnement;Fun;0;1
+Salim;Permaculture;Environnement;Fun;0;1
+Benjamin;Cuisine;Gourmandise;Fun;0;1
+Pierre-Etienne;Mixologie;Gourmandise;Fun;0;1
+Benjamin;Oenologie;Gourmandise;Fun;0;1
+Raphaelle R;Recettes provencales;Gourmandise;Fun;1;0
+Raphaelle R;Recettes Thaies / chinoises;Gourmandise;Fun;1;0
+Benoit;Allemand;Langues;Fun;0;1
+Benoit;Espagnol;Langues;Fun;1;0
+Vincent ;Batterie;Musique;Fun;1;0
+Thomas;Chant;Musique;Fun;0;1
+Benjamin;Guitare, piano;Musique;Fun;1;0
+Guillaume;Harmonie musicale;Musique;Fun;1;0
+Line;Violoncelle;Musique;Fun;1;0
+Anne;Ballet;Activite Physique;Fun;1;0
+Nadim;Course a pied;Activite Physique;Fun;1;0
+Pierre-Etienne;Course a pied;Activite Physique;Fun;1;0
+Remi;Course a pied;Activite Physique;Fun;1;0
+Benoit;Danse classique;Activite Physique;Fun;1;0
+Benjamin;Escalade;Activite Physique;Fun;1;0
+Pierre-Etienne;Escalade;Activite Physique;Fun;1;0
+Lisa;Course a pied;Activite Physique;Fun;1;0
+Antoine ;Jonglage;Activite Physique;Fun;1;0
+Anne;Danse Modern-jazz;Activite Physique;Fun;1;0
+Loup;Navigation;Activite Physique;Fun;0;1
+Loup;Peche a la palourde;Activite Physique;Fun;0;1
+Lisa;Ping-pong;Activite Physique;Fun;1;0
+Aliaume ;Salsa cubaine;Activite Physique;Fun;1;0
+Sylvain;Wikipedia / wikidata;Engagement citoyen;Fun;1;0
+Benjamin;Yoga;Activite Physique;Fun;0;1
+Salim;Ecriture;Communication;Transverse;1;0
+Nadim;Communication;Communication;Transverse;0;1
+Camille;Communication non-violente;Communication;Transverse;0;1
+Cedric;Communication non-violente;Communication;Transverse;0;1
+Guillaume;Communication non-violente;Communication;Transverse;0;1
+Nathan;Communication non-violente;Communication;Transverse;0;1
+Joseph ;Marketing Open Source;Communication;Transverse;1;0
+Adeline ;Redaction;Communication;Transverse;1;0
+Adeline ;Vulgarisation;Communication;Transverse;1;0
+Camille;Politiques publiques;Culture des administrations;Transverse;0;1
+Adeline ;Fonctionnement de l'administration;Culture des administrations;Transverse;0;1
+Pierre-Etienne;Sociologie de la transformation publique;Culture des administrations;Transverse;0;1
+Aliaume ;Animation de projet;Gestion de projet;Transverse;0;1
+Camille;Cadrage et pilotage de projet;Gestion de projet;Transverse;1;0
+Aliaume ;Communication;Gestion de projet;Transverse;0;1
+Pierre-Etienne;Conduite de projet;Gestion de projet;Transverse;1;0
+Vincent ;Management;Gestion de projet;Transverse;1;0
+Elisabeth ;Methodologie scrum;Gestion de projet;Transverse;1;0
+Remi;Methodologies agiles;Gestion de projet;Transverse;0;1
+Thomas;Animation de communaute;Methodes;Transverse;0;1
+Romain;Design sprint;Methodes;Transverse;1;0
+Coline;Enjeux du numerqiue;Methodes;Transverse;0;1
+Line;Revues de littérature;Methodes;Transverse;1;0
+Marc;Methodologie collective;Methodes;Transverse;1;0
+Pierre-Etienne;Methodologies design;Methodes;Transverse;1;0
+Sophie;Methodologies design;Methodes;Transverse;1;0
+Matthieu;Gestion de groupes pedagogiques;Pedagogie;Transverse;0;1
+Marc;Incubation;Pedagogie;Transverse;0;1
+Elisabeth ;Ingenierie pedagogique;Pedagogie;Transverse;1;0
+Marc;Outils;Pedagogie;Transverse;0;1
+Coline;Pedagogies alternatives;Pedagogie;Transverse;0;1
+Nadim;Pedagogies alternatives;Pedagogie;Transverse;0;1
+Cedric;Zetetique;Pedagogie;Transverse;1;0
+Adeline ;Logiques de programmation;Programmation;Transverse;0;1
+Julie;Design fiction;Conception;Design;1;0
+Nathan;Design fiction;Conception;Design;1;0
+Elodie;0;0;0;0;0
