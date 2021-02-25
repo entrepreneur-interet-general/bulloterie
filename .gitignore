@@ -1,0 +1,5 @@
+#ignore the R Studio Server Connection
+/BulloterieEIG/rsconnect
+
+# Ignore the data
+*.csv
