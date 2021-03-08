@@ -154,50 +154,64 @@ library(shiny)
 
 
 
-ui <- fluidPage(
+ui <- navbarPage(
     
     # theme = shinytheme("flatly"),
     # theme = "www/css/all.min.css",
     # Logo and application title
-    tags$img(height = 100, src = "https://raw.githubusercontent.com/entrepreneur-interet-general/site-eig/811e28c13afa2d6d981d6ec1ae2cc1a7876cf6d1/img/eig_.svg"),
-    titlePanel("La Bulloterie EIG"),
-    tags$body(h1('This is a level 1 title'),
-                 p("L'ensemble des centres d'intérêts de la promo EIG 4 sont rassemblés ici. Pour trouver qui veut apprendre ou
-                       transmettre les mêmes sujets que toi, utilise la barre de recherche !"),
-                 #tags$a(href="https://entrepreneur-interet-general.etalab.gouv.fr/", "This is a link to EIG")
+    title = "La Bulloterie des EIG4",
+    tabPanel("Bienvenue !",
+             tags$img(height = 80, src = "https://raw.githubusercontent.com/entrepreneur-interet-general/site-eig/811e28c13afa2d6d981d6ec1ae2cc1a7876cf6d1/img/eig_.svg"),
+             titlePanel("Bienvenue dans la Bulloterie des EIG 4 !"),
+             tags$body(br(),
+                       p("En Septembre 2020, les" , 
+                        tags$b(tags$a(href="https://entrepreneur-interet-general.etalab.gouv.fr/","Entrepreneur.e.s d'Intérêt Général")), 
+                        "se sont réuni.e.s lors du séminaire de lancement de la 4ème promotion.",
+                        "Ensemble, ils et elles ont mis à plat leurs centres d'intérêts (outils, méthodes, mais aussi passions et loisirs !"),
+                       br(),
+                       p("Pour naviguer dans la Bulloterie, utilise les onglets ci-dessus."),
+                       br(),
+                       p("La", tags$b("vue d'ensemble"),"offre")
              ),
-
-    # Bubble chart
-    fluidRow(column(6, offset = 2, tags$img({Bubblechart}))
-             ),
-    
-    #tags$img({Bubblechart}),
-    
-    hr(),
-    
-    fluidRow(
-        column(3,
-               h4("Bulloterie"),
         ),
-        column(3,
-               h4("Explore la Bulloterie !"),
-               checkboxGroupInput("domainofinterest", 
-                                  h3("Quel domaine t'intéresse ?"), 
-                                  choices = list("Data" = "Data", 
-                                                 "Design" = "Design", 
-                                                 "Dev" = "Dev",
-                                                 "Fun" = "Fun",
-                                                 "Transverse" = "Transverse"),
-                                  selected = 1)),
-        br(),
-        checkboxInput('Donne', 'Donne'),
-        checkboxInput('Prend', 'Prend'),
-
-        column(6,
-               DTOutput('tbl'))
-        )
-    )
+    tabPanel("Vue d'ensemble",
+        tags$img(height = 80, src = "https://raw.githubusercontent.com/entrepreneur-interet-general/site-eig/811e28c13afa2d6d981d6ec1ae2cc1a7876cf6d1/img/eig_.svg"),
+        titlePanel("La Bulloterie des EIG 4 : panorama des centres d'intérêts"),
+        tags$body(p("L'ensemble des centres d'intérêts de la promo EIG 4 sont rassemblés ici. Pour trouver qui veut apprendre ou
+                     transmettre les mêmes sujets que toi, utilise la barre de recherche !"),
+                     #tags$a(href="https://entrepreneur-interet-general.etalab.gouv.fr/", "This is a link to EIG")
+                 ),
+        # Bubble chart
+        fluidRow(column(8, offset = 2, 
+                        tags$img({Bubblechart}))
+                 )
+        ),
+    tabPanel("En détails",
+        tags$img(height = 80, src = "https://raw.githubusercontent.com/entrepreneur-interet-general/site-eig/811e28c13afa2d6d981d6ec1ae2cc1a7876cf6d1/img/eig_.svg"),
+             
+        fluidRow(
+            column(3,
+                   h4("Bulloterie"),
+            ),
+            column(3,
+                   h4("Explore la Bulloterie !"),
+                   checkboxGroupInput("domainofinterest", 
+                                      h3("Quel domaine t'intéresse ?"), 
+                                      choices = list("Data" = "Data", 
+                                                     "Design" = "Design", 
+                                                     "Dev" = "Dev",
+                                                     "Fun" = "Fun",
+                                                     "Transverse" = "Transverse"),
+                                      selected = 1)),
+            br(),
+            checkboxInput('Donne', 'Donne'),
+            checkboxInput('Prend', 'Prend'),
     
+            column(6,
+                   DTOutput('tbl'))
+            )
+    )
+)
 
 
 
