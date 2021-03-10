@@ -3,3 +3,6 @@
 
 # Ignore the data
 *.csv
+.Rproj.user
+.rds
+.Rproj
