@@ -11,22 +11,19 @@ library(tidyverse)
 library(hrbrthemes)
 #devtools::install_github("jeromefroe/circlepackeR")
 library(circlepackeR)
-library(shiny)
-library(shinydashboard)
-library(shinythemes)
 library(dplyr)
 library(DT)
+library(data.table)
+library(lubridate)
 
+# Load the Shiny libraries
 library(shiny)
+#library(shinythemes)
 library(shinyjs)
-
 # install.packages("remotes")
 # library(remotes)
 # install_github("AnalytixWare/ShinySky")
 library(shinysky)
-library(DT)
-library(data.table)
-library(lubridate)
 library(shinyalert)
 useShinyalert()
 
@@ -64,7 +61,7 @@ saveRDS(input_data,"testdt.rds")
 # Making Data Tables editable
 modFunction <- function(input, output, session, data,reset) {
     
-    v <- reactiveValues(data = data)
+    v <- reactiveValues(data = input_data)
     
     proxy = dataTableProxy("mod_table")
     
@@ -78,8 +75,8 @@ modFunction <- function(input, output, session, data,reset) {
         str(info)
         
         isolate(
-            if (j %in% match(c("ratio","cost","updated_price"), names(v$data))) {
-                print(match(c("ratio","cost", "updated_price"), names(v$data)))
+            if (j %in% match(c("Nom","Sujet","Theme"), names(v$data))) {
+                print(match(c("Nom","Sujet", "Theme"), names(v$data)))
                 v$data[i, j] <<- DT::coerceValue(k, v$data[i, j])
                 print(v$data)
                 
@@ -128,14 +125,22 @@ ui <- navbarPage(
          br(),
          titlePanel("Bienvenue dans la Bulloterie des EIG 4 !"),
          tags$body(br(),
-                   p("En Septembre 2020, les" , 
+                   p("En Septembre 2020, la 4ème promotion des" , 
                     tags$b(tags$a(href="https://entrepreneur-interet-general.etalab.gouv.fr/","Entrepreneur.e.s d'Intérêt Général")), 
-                    "se sont réuni.e.s lors du séminaire de lancement de la 4ème promotion.",
-                    "Ensemble, ils et elles ont mis à plat leurs centres d'intérêts (outils, méthodes, mais aussi passions et loisirs !"),
+                    "se retrouvaient pour la première fois, en collectif, à l'occasion du Bootcamp d'embarquement.",
+                    br(),
+                    br(),
+                    "Un des objectifs de cette semaine consistait à initier un esprit de promotion et encourager la collaboration malgré le contexte sanitaire.",
+                    " La ",
+                    tags$b("Bulloterie "),
+                    "- socialement distanciée bien sûr ! - y a contribué. ",
+                    " Avec cet exercice, chacun et chacune a mis à plat ses centres d'intérêts, qu'il s'agisse d'outils, de méthodes, ou encore de passions et loisirs personnels."),
                    br(),
-                   p("Pour naviguer dans la Bulloterie, utilise les onglets ci-dessus."),
+                   p("Pour explorer plus en détails la",
+                   tags$b("Bulloterie"),
+                   "et même mettre à jour tes entrées, tu peux utiliser les onglets ci-dessus."),
                    br(),
-                   p("La", tags$b("vue d'ensemble"),"offre")
+                   p("La visualisation ci-dessous offre une vue d'ensemble de la diversité des centres d'intérêt et de la façon dont ils se recoupent.")
                  ),
          tags$img({Bubblechart})
         ),
@@ -213,20 +218,25 @@ ui <- navbarPage(
 
 # b. Define server logic required
 
-server2 <- function(input, output, session) {
-    # Try to update searchable text
-    #updateSelectizeInput(session, 'foo', choices = data, server = TRUE) 
-    demodata<-input_data
-    callModule(modFunction,"editable", demodata,
-               reset = reactive(input$reset))
-    output$tbl = renderDT(
-                data, options = list(lengthChange = FALSE)
-            )
-    }
+
+## Version 1: simple, non-editable DT
+
+# server2 <- function(input, output, session) {
+#     # Try to update searchable text
+#     #updateSelectizeInput(session, 'foo', choices = data, server = TRUE) 
+#     demodata<-input_data
+#     callModule(modFunction,"editable", demodata,
+#                reset = reactive(input$reset))
+#     output$tbl = renderDT(
+#                 data, options = list(lengthChange = FALSE)
+#             )
+#     }
 
 
 
-#######
+###########################################################
+#Version 2
+
 server <- function(input, output, session){
     
     ### DataTable
@@ -237,7 +247,7 @@ server <- function(input, output, session){
     
     ### interactive dataset 
     vals_trich<-reactiveValues()
-    vals_trich$Data<-readRDS("note.rds")
+    vals_trich$Data<-readRDS("testdt.rds")
     
     #### MainBody_trich is the id of DT table
     output$MainBody_trich<-renderUI({
@@ -247,11 +257,11 @@ server <- function(input, output, session){
                    HTML('<div class="btn-group" role="group" aria-label="Basic example" style = "padding:10px">'),
                    ### tags$head() This is to change the color of "Add a new row" button
                    tags$head(tags$style(".butt2{background-color:#231651;} .butt2{color: #e6ebef;}")),
-                   div(style="display:inline-block;width:30%;text-align: center;",actionButton(inputId = "Add_row_head",label = "Add", class="butt2") ),
+                   div(style="display:inline-block;width:30%;text-align: center;",actionButton(inputId = "Add_row_head",label = "Ajouter", class="butt2") ),
                    tags$head(tags$style(".butt4{background-color:#4d1566;} .butt4{color: #e6ebef;}")),
-                   div(style="display:inline-block;width:30%;text-align: center;",actionButton(inputId = "mod_row_head",label = "Edit", class="butt4") ),
+                   div(style="display:inline-block;width:30%;text-align: center;",actionButton(inputId = "mod_row_head",label = "Modifier", class="butt4") ),
                    tags$head(tags$style(".butt3{background-color:#590b25;} .butt3{color: #e6ebef;}")),
-                   div(style="display:inline-block;width:30%;text-align: center;",actionButton(inputId = "Del_row_head",label = "Delete", class="butt3") ),
+                   div(style="display:inline-block;width:30%;text-align: center;",actionButton(inputId = "Del_row_head",label = "Supprimer", class="butt3") ),
                    ### Optional: a html button 
                    # HTML('<input type="submit" name="Add_row_head" value="Add">'),
                    HTML('</div>') ),
@@ -273,14 +283,13 @@ server <- function(input, output, session){
     
     observeEvent(input$Add_row_head, {
         ### This is the pop up board for input a new row
-        showModal(modalDialog(title = "Add a new row",
-                              dateInput(paste0("Date_add", input$Add_row_head), "Date:", value = Sys.Date()),
-                              textInput(paste0("Description_add", input$Add_row_head), "Description"),
-                              textInput(paste0("Names_add", input$Add_row_head), "Name"),
-                              numericInput(paste0("Request_add", input$Add_row_head), "Request Number:",0),  
-                              selectInput(paste0("Completed_add", input$Add_row_head), "Status:",choices=c("Yes", "On progress")),
-                              textInput(paste0("Comments_add", input$Add_row_head), "Comments"), 
-                              actionButton("go", "Add item"),
+        showModal(modalDialog(title = "Ajoute une nouvelle entrée",
+                              textInput(paste0("Nom_add", input$Add_row_head), "Nom"),
+                              textInput(paste0("Sujet_add", input$Add_row_head), "Sujet"),
+                              numericInput(paste0("Theme_add", input$Add_row_head), "Theme:",0),  
+                              selectInput(paste0("CMetier_add", input$Add_row_head), "Status:",choices=c("Yes", "On progress")),
+                              textInput(paste0("Donne_add", input$Add_row_head), "Donne"), 
+                              actionButton("go", "Sauvegarder l'entrée"),
                               easyClose = TRUE, footer = NULL ))
         
     })
@@ -303,8 +312,8 @@ server <- function(input, output, session){
     
     ### save to RDS part 
     observeEvent(input$Updated_trich,{
-        saveRDS(vals_trich$Data, "note.rds")
-        shinyalert(title = "Saved!", type = "success")
+        saveRDS(vals_trich$Data, "testdt.rds")
+        shinyalert(title = "Saved!", type = "Tes modifications ont bien été enregistrées !")
     })
     
     
@@ -315,16 +324,16 @@ server <- function(input, output, session){
         showModal(
             if(length(input$Main_table_trich_rows_selected)>=1 ){
                 modalDialog(
-                    title = "Warning",
-                    paste("Are you sure delete",length(input$Main_table_trich_rows_selected),"rows?" ),
+                    title = "Attention",
+                    paste("Veux-tu vraiment supprimer",length(input$Main_table_trich_rows_selected),"entrées ?" ),
                     footer = tagList(
-                        modalButton("Cancel"),
-                        actionButton("ok", "Yes")
+                        modalButton("Annuler"),
+                        actionButton("ok", "Oui, vas-y")
                     ), easyClose = TRUE)
             }else{
                 modalDialog(
-                    title = "Warning",
-                    paste("Please select row(s) that you want to delect!" ),easyClose = TRUE
+                    title = "Attention",
+                    paste("Sélectionne l'entrée que tu souhaites supprimer" ),easyClose = TRUE
                 )
             }
             
@@ -343,10 +352,10 @@ server <- function(input, output, session){
             if(length(input$Main_table_trich_rows_selected)>=1 ){
                 modalDialog(
                     fluidPage(
-                        h3(strong("Modification"),align="center"),
+                        h3(strong("Modifier une entrée"),align="center"),
                         hr(),
                         dataTableOutput('row_modif'),
-                        actionButton("save_changes","Save changes"),
+                        actionButton("save_changes","Sauvegarder les modifications"),
                         tags$script(HTML("$(document).on('click', '#save_changes', function () {
                              var list_value=[]
                              for (i = 0; i < $( '.new_input' ).length; i++)
@@ -356,8 +365,8 @@ server <- function(input, output, session){
                              Shiny.onInputChange('newValue', list_value) });")) ), size="l" )
             }else{
                 modalDialog(
-                    title = "Warning",
-                    paste("Please select the row that you want to edit!" ),easyClose = TRUE
+                    title = "Attention",
+                    paste("Sélectionne l'entrée que tu souhaites modifier !" ),easyClose = TRUE
                 )
             }
             
