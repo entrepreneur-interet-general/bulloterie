@@ -166,7 +166,7 @@ ui <- navbarPage(
         "La visualisation ci-dessous offre une vue d'ensemble de la diversité des centres d'intérêt et de la façon dont ils se recoupent."
       )
     ),
-    #circlepackeROutput("circle1", height = 1100)
+    circlepackeROutput("circle1", height = 1100)
   ),
   
   
