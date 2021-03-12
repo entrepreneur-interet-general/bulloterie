@@ -32,7 +32,7 @@ useShinyalert()
 
 
 # Load dataset
-data <- readRDS("testdt.rds")
+data <- readRDS("bulloterie.rds")
 
 # Remove punctuation characters
 data <- as.data.frame(gsub("[[:punct:]]", "", as.matrix(data)))
@@ -76,7 +76,7 @@ Bubblechart <-
 
 
 input_data <- as.data.frame(data)
-#saveRDS(input_data, "updatedtdt.rds")
+#saveRDS(input_data, "updated_bulloterie.rds")
 
 
 
@@ -247,7 +247,7 @@ server <- function(input, output, session) {
   ### CirclePackeR
   
   output$circle1 = renderCirclepackeR({
-    data <- readRDS("testdt.rds")
+    data <- readRDS("bulloterie.rds")
     data <- as.data.frame(gsub("[[:punct:]]", "", as.matrix(data)))
     
     data$pathString <-
@@ -273,7 +273,7 @@ server <- function(input, output, session) {
   })
   ### Dendogram
   output$dendogram = renderCollapsibleTree({
-    data <- readRDS("testdt.rds")
+    data <- readRDS("bulloterie.rds")
     data <- as.data.frame(gsub("[[:punct:]]", "", as.matrix(data)))
     
     data$pathString <-
@@ -308,7 +308,7 @@ server <- function(input, output, session) {
   
   ### interactive dataset
   vals_trich <- reactiveValues()
-  vals_trich$Data <- readRDS("testdt.rds")
+  vals_trich$Data <- readRDS("bulloterie.rds")
   
   #### MainBody_trich is the id of DT table
   output$MainBody_trich <- renderUI({
@@ -423,7 +423,7 @@ server <- function(input, output, session) {
   
   ### save to RDS part
   observeEvent(input$Updated_trich, {
-    saveRDS(vals_trich$Data, "testdt.rds")
+    saveRDS(vals_trich$Data, "bulloterie.rds")
     shinyalert(title = "Saved!", type = "Tes modifications ont bien été enregistrées !")
   })
   
