@@ -1,0 +1,13 @@
+name: Bulloterie_Beta
+title: Bulloterie_Beta
+username:
+account: entrepreneurs-dinteret-general
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3774712
+bundleId: 4331978
+url: https://entrepreneurs-dinteret-general.shinyapps.io/Bulloterie_Beta/
+when: 1615483927.17048
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: Bulloterie_Clean.csv|LICENSE|note.rds|README.md|server.R|ui.R|updatedtdt.rds|css/all.css|css/all.css.map|css/all.min.css|js/all.js|js/all.min.js|js/all.min.js.map|BulloterieEIG|fonts
