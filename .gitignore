@@ -1,5 +1,5 @@
 #ignore the R Studio Server Connection
-rsconnect
+/rsconnect
 
 # Ignore the data
 *.csv
