@@ -24,7 +24,7 @@ library(shinythemes)
 library(shinyjs)
 # install.packages("remotes")
 # library(remotes)
-# install_github("AnalytixWare/ShinySky")
+# install_github("AnalytixWare/ShinySky") # to get customized buttons
 library(shinysky)
 library(shinyalert)
 useShinyalert()
@@ -76,11 +76,7 @@ Bubblechart <-
 
 
 input_data <- as.data.frame(data)
-saveRDS(input_data, "updatedtdt.rds")
-
-
-
-
+#saveRDS(input_data, "updatedtdt.rds")
 
 
 
@@ -170,7 +166,7 @@ ui <- navbarPage(
         "La visualisation ci-dessous offre une vue d'ensemble de la diversité des centres d'intérêt et de la façon dont ils se recoupent."
       )
     ),
-    circlepackeROutput("circle1",height = 1100)
+    #circlepackeROutput("circle1", height = 1100)
   ),
   
   
@@ -179,8 +175,6 @@ ui <- navbarPage(
     tags$img(height = 80, src = "https://raw.githubusercontent.com/entrepreneur-interet-general/site-eig/811e28c13afa2d6d981d6ec1ae2cc1a7876cf6d1/img/eig_.svg"),
     titlePanel("La Bulloterie des EIG 4 : panorama des centres d'intérêts"),
     collapsibleTreeOutput("dendogram")
-    #tags$img({p})
-    
   ),
   
   tabPanel(
@@ -259,11 +253,9 @@ server <- function(input, output, session) {
     data$pathString <-
       paste("EIG", data$Metier, data$Theme, data$Sujet, sep = "/")
     data$Statut <-
-      ifelse(
-        data$Prend == 1,
-        "Curieux / Curieuse",
-        "Connaisseuse / Connaisseur"
-      )
+      ifelse(data$Prend == 1,
+             "Curieux / Curieuse",
+             "Connaisseuse / Connaisseur")
     
     data <- data %>%
       mutate(Prend = as.integer(Prend)) %>%
@@ -272,13 +264,11 @@ server <- function(input, output, session) {
       mutate(Total = n())
     
     bulle <- as.Node(data)
-
-    circlepackeR(
-      bulle,
-      size = "Total",
-      color_min = "rgb(0,0,145)",
-      color_max = "rgb(206,206,206)"
-    )
+    
+    circlepackeR(bulle,
+                 size = "Total",
+                 color_min = "rgb(0,0,145)",
+                 color_max = "rgb(206,206,206)")
     
   })
   ### Dendogram
@@ -289,11 +279,9 @@ server <- function(input, output, session) {
     data$pathString <-
       paste("EIG", data$Metier, data$Theme, data$Sujet, sep = "/")
     data$Statut <-
-      ifelse(
-        data$Prend == 1,
-        "Curieux / Curieuse",
-        "Connaisseuse / Connaisseur"
-      )
+      ifelse(data$Prend == 1,
+             "Curieux / Curieuse",
+             "Connaisseuse / Connaisseur")
     
     data <- data %>%
       mutate(Prend = as.integer(Prend)) %>%
@@ -310,7 +298,7 @@ server <- function(input, output, session) {
     )
     
   })
-
+  
   
   ### DataTable
   demodata <- input_data
