@@ -3,6 +3,6 @@
 
 # Ignore the data
 *.csv
-.Rproj.user
-.rds
-.Rproj
+/.Rproj.user
+*.rds
+*.Rproj
