@@ -1,8 +1,8 @@
 #ignore the R Studio Server Connection
-rsconnect
+/rsconnect
 
 # Ignore the data
 *.csv
-.Rproj.user
-.rds
-.Rproj
+/.Rproj.user
+*.rds
+*.Rproj
